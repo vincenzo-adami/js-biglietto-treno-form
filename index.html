@@ -11,8 +11,34 @@
   </head>
   <body>
     <main>
-      <section>
-
+      <section class="container">
+        <h1 class="d-flex justify-content-center">Costo del biglietto</h1>
+        <form class="row py-3 g-3" action="">
+          <div class="col-xl-6">
+            <label for="distance" class="form-label">Distanza (km)</label>
+            <input id="distance" type="text" class="form-control" placeholder="12.6" aria-label="Distance">
+          </div>
+          <div class="col-xl-6">
+            <label for="age" class="form-label">Età passeggero</label>
+            <select class="form-select" id="age">
+              <option selected value="">-- Scegli --</option>
+              <option value="m">Minorenne</option>
+              <option value="a">Adulto</option>
+              <option value="o">Over 65</option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Calcola</button>
+          </div>
+        </form>
+      </section>
+      <section id="price-section" class="container py-5 d-none">
+        <div class="row">
+          <h2 class="h1">Prezzo biglietto</h2>
+          <p id="price" class="col py-2">
+            Il prezzo del tuo biglietto è di €
+          </p>
+        </div>
       </section>
     </main>
 
