@@ -34,9 +34,16 @@ formElement.addEventListener('submit', function (event) {
   }
 
   // rendo visibile la section#price-section e aggiungo il valore al p#price
-
   priceSectionElement.classList.remove('d-none');
   tDistanceElement.innerHTML = (distance + 'km')
-  tAgeElement.innerHTML = age;
+  if (tAgeElement.innerHTML !== '') {
+    tAgeElement.innerHTML = age;
+  } else {
+    tAgeElement.innerHTML = 'adulto';
+  }
   tPriceElement.innerHTML = '€' + finalPrice.toFixed(2);
+
+  // clear form
+  distanceElement.value = '';
+  ageElement.value = '';
 })
