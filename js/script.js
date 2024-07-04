@@ -27,10 +27,10 @@ formElement.addEventListener('submit', function (event) {
 
   // verifico la possibilità di sconto e nel caso l'applico
   if (age === 'minorenne') {
-    finalPrice *= 0.8;
+    finalPrice *= 0.8; // sconto del 20%
   }
   else if (age === 'over65') {
-    finalPrice *= 0.6;
+    finalPrice *= 0.6; // sconto del 40%
   }
 
   // rendo visibile la section#price-section e aggiungo il valore al p#price
